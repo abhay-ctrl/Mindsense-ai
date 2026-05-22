@@ -5,70 +5,94 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mindsense AI</title>
 
-  <link rel="stylesheet" href="landing.css">
+  <style>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial;
+    }
+
+    body{
+      background:black;
+      color:white;
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      flex-direction:column;
+      text-align:center;
+      overflow:hidden;
+    }
+
+    body::before{
+      content:"";
+      position:absolute;
+      width:100%;
+      height:100%;
+      background:
+      radial-gradient(circle,#00eaff33,transparent);
+      animation:pulse 4s infinite;
+    }
+
+    @keyframes pulse{
+      0%{transform:scale(1);}
+      50%{transform:scale(1.2);}
+      100%{transform:scale(1);}
+    }
+
+    h1{
+      font-size:70px;
+      z-index:2;
+      color:#00eaff;
+      text-shadow:0 0 30px #00eaff;
+    }
+
+    p{
+      margin-top:20px;
+      max-width:700px;
+      z-index:2;
+      font-size:20px;
+      color:#ddd;
+    }
+
+    button{
+      margin-top:40px;
+      padding:15px 40px;
+      font-size:18px;
+      border:none;
+      border-radius:50px;
+      cursor:pointer;
+
+      background:linear-gradient(90deg,#00eaff,#6c63ff);
+      color:white;
+
+      z-index:2;
+
+      transition:0.3s;
+    }
+
+    button:hover{
+      transform:scale(1.08);
+      box-shadow:0 0 25px #00eaff;
+    }
+
+  </style>
 </head>
 
 <body>
 
-<div class="stars"></div>
-
-<nav class="navbar">
-
-  <div class="logo">
-    MINDSENSE AI
-  </div>
-
-  <button class="login-btn"
-    onclick=<a href="chat.html">
-    Login
-  </button>
-
-</nav>
-
-<section class="hero">
-
-  <div class="glass-card glass-left">
-    <h3>AI Intelligence</h3>
-    <p>
-      Advanced futuristic intelligence with immersive interaction.
-    </p>
-  </div>
-
-  <h1>
-    EXPERIENCE <br>
-    THE FUTURE OF AI
-  </h1>
+  <h1>MINDSENSE AI</h1>
 
   <p>
-    Mindsense AI is a futuristic AI platform designed to redefine
-    human interaction with artificial intelligence using immersive
-    interfaces, real-time intelligence, and next generation design.
+    Experience the futuristic AI chatbot developed by
+    Abhay Gupta and Saksham Gupta.
   </p>
 
-  <div class="hero-buttons">
-
-    <button class="primary-btn"
-      onclick="window.location.href='index.html'">
-      Launch AI
-    </button>
-
-    <button class="secondary-btn">
-      Explore Features
-    </button>
-
-  </div>
-
-  <div class="glass-card glass-right">
-    <h3>Next Generation</h3>
-    <p>
-      Designed for the future with immersive animations and
-      3D experiences.
-    </p>
-  </div>
-
-</section>
+  <button onclick="window.location.href='chat.html'">
+    Launch AI
+  </button>
 
 </body>
 </html>
